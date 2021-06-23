@@ -1,0 +1,8 @@
+{
+  "description": "Given a undirected graph and integers l and k, output all pairs (v,w) (v<w) of vertices such that are at least k paths from v to w of length exactly l. Paths may use edges multiple times.",
+  "difficulty": 3,
+  "tags": [
+    "graphs",
+    "matrices"
+  ]
+}
