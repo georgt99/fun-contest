@@ -41,7 +41,7 @@ int main() {
 
     for (int i = 0; i < d-1; i++) { // d-1 times set paths = map * paths
         vector<vector<int>> next(n, vector<int>(n));
-        multiplyMatrices(paths, map, next);
+        multiplyMatrices(n, paths, map, next);
         paths = next;
     }
 
