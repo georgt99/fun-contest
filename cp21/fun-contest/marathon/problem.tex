@@ -4,19 +4,29 @@
 
 \makeheader{end of contest}
 
-\placeholder{Problem description}
+Queen Mara of Marathonia is obsessed with marathons. Every year, she likes to celebrate her birthday with a marathon through her kingdom. Thereby, the number of passed streets should correspond to her age,. So at her first birthday (organized by her parents), the marathon was just to run along a single street while on her 9th birthday it was 9 streets long and so on.
+
+The marathon should always start in one town of her kingdom and end in another, so pairs of towns can apply to form the start and end of the route. Because local economy strongly benefits from all the visitors and celebrations at these locations, all towns have a strong incentive to apply.
+
+However, as a spoiled royal child, the queen is picky sometimes. Depending on her mood, she will only allow application of towns that can offer at least a certain number of different possible routes between these towns.
+
+At least, the queen doesn't care whether streets are included in the route multiple times and each time a street is used will contribute to the value to match her age.
 
 \paragraph*{Input}
+The first line of input consists of two integers \(1\le a \le 100\) and \(1\le k \le 20\), the queens age and mood, respectively.
 
-\placeholder{Input description}
+The next line contains two integers. First \(1 \le n \le 1000\), the number of towns, and second \(0\le m \le 3\cdot 10^5\). 
+
+The next \(m\) lines each contain two integers \(0 \le a,b < n\), representing a undirected street from town \(a\) to town \(b\). 
 
 \paragraph*{Output}
+The first line of the output should be an integer \(z\), the number of pairs of towns \((x,y)\) with \(x < y\) such that there are at least \(k\) different routes from \(x\) to \(y\) consisting of exactly \(a\) streets.
 
-\placeholder{Output description}
+In the next \(z\) lines, for every such pair output a line \texttt{"\(a\) \(b\)"}. The pairs should be printed in lexicographical order.
 
-\begin{samples}
-  \sample{sample1}
-  \sample{sample2}
-\end{samples}
+% \begin{samples}
+  % \sample{sample1}
+  % \sample{sample2}
+% \end{samples}
 
 \end{document}
