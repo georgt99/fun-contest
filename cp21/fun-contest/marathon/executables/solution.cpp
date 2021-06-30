@@ -25,18 +25,18 @@ int main() {
     cin.tie(nullptr);
     cout.precision(10);
 
-    int n, m, k, d; cin >> n >> m >> k >> d;
+    int n, m, a, k; cin >> a >> k >> n >> m;
     
     //Read in graph into adjacency matrix (and a copy)
     vector<vector<int>> map(n, vector<int>(n,0));
     vector<vector<int>> paths(n, vector<int>(n,0));
-    int a,b;
+    int x, y;
     for (int i = 0; i < m; i++) {  
-        cin >> a >> b;
-        map[a][b] = 1;
-        map[b][a] = 1;
-        paths[a][b] = 1;
-        paths[b][a] = 1;
+        cin >> x >> y;
+        map[x][y] = 1;
+        map[y][x] = 1;
+        paths[x][y] = 1;
+        paths[y][x] = 1;
     }
 
     for (int i = 0; i < d-1; i++) { // d-1 times set paths = map * paths
@@ -52,6 +52,6 @@ int main() {
             }
         } 
     } 
-    cout << -1 << endl;
+    cout << "0 0" << endl;
     return 0;
 }
