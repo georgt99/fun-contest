@@ -20,9 +20,11 @@ The next line contains two integers. First \(1 \le n \le 1000\), the number of t
 The next \(m\) lines each contain two integers \(0 \le a,b < n\), representing a undirected street from town \(a\) to town \(b\). 
 
 \paragraph*{Output}
-The first line of the output should be an integer \(z\), the number of pairs of towns \((x,y)\) with \(x < y\) such that there are at least \(k\) different routes from \(x\) to \(y\) consisting of exactly \(a\) streets.
+Output every pair of towns \((x,y)\) with \(x < y\) such that there are at least \(k\) different routes from \(x\) to \(y\) consisting of exactly \(a\) streets.
 
-In the next \(z\) lines, for every such pair output a line \texttt{"\(a\) \(b\)"}. The pairs should be printed in lexicographical order (so \texttt{"\(1\) \(4\)"} before \texttt{"\(1\) \(5\)"} before \texttt{"\(2\) \(3\)"}).
+Therefore, print every such pair in a line \texttt{"\(x\) \(y\)"}. The pairs should be printed in lexicographical order (so \texttt{"\(1\) \(4\)"} before \texttt{"\(1\) \(5\)"} before \texttt{"\(2\) \(3\)"}).
+
+After that, print a line \texttt{"\(0\) \(0\)"}.
 
 % \begin{samples}
   % \sample{sample1}
