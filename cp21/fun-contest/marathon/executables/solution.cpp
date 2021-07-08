@@ -5,13 +5,14 @@ using namespace std;
 using ll = long long;
 
 //Multiplies A and B and stores the result in C.
-void multiplyMatrices(int n, vector<vector<int>>& A, vector<vector<int>>& B, vector<vector<int>>& C) {
+void multiplyMatrices(int n, vector<vector<int>>& A, vector<vector<int>>& B, vector<vector<int>>& C, int max) {
     int sum;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             sum = 0;
             for (int k = 0; k < n; k++) {
                 sum += A[k][j] * B[i][k];
+                sum = min(sum, max);
             }
             C[i][j] = sum;
         }        
@@ -39,9 +40,9 @@ int main() {
         paths[y][x] = 1;
     }
 
-    for (int i = 0; i < d-1; i++) { // d-1 times set paths = map * paths
+    for (int i = 0; i < a-1; i++) { // a-1 times set paths = map * paths
         vector<vector<int>> next(n, vector<int>(n));
-        multiplyMatrices(n, paths, map, next);
+        multiplyMatrices(n, paths, map, next, k);
         paths = next;
     }
 
