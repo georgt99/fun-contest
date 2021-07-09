@@ -1,0 +1,13 @@
+{
+  "based_on": {
+    "data": [
+      "cp21",
+      "fun-contest",
+      "portal"
+    ],
+    "type": "uh-what-do-you-mean-with-type"
+  },
+  "description": "solve a test chamber while thinking with portals",
+  "difficulty": 3,
+  "tags": ["graph", "tree", "abstracting"]
+}

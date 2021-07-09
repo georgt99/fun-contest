@@ -1,0 +1,31 @@
+\input{.template/template.tex}
+
+\begin{document}
+
+\makeheader{end of contest}
+
+\href{https://i1.theportalwiki.net/img/d/d0/GLaDOS_05_part1_entry-1.wav}{``The Enrichment Center regrets to inform you that this next test is impossible.''}
+
+...is what you hear GLaDOS say as you enter the test chamber. Odd, since the exit is right next to the entrance. However, it is locked and a number of corridors lead away from this first room. It appears that the test chamber is made up of $n$ small rooms (not counting the starting room $0$) connected with corridors. The starting room contains a timer-button that happens to remain active for exactly $n$ time units. Every other room contains a regular button. The exit becomes unlocked only if all regular buttons are pressed while the timer-button in the starting room is active (and remains active thereafter). It takes one time unit to traverse a corridor. Traversing a room or pressing a button takes no time (duh).
+
+Luckily, you still have your portal gun. In case you ``forgot how it works'': You can place an orange or blue portal on any white surface (which each room contains at least one of). As each corridor takes some turns, you can only place a portal in your current room (since you never have line of sight to the white surface in another room). There can only be one orange portal and one blue portal at a time. Entering one of the portals makes you instantly exit the other portal.
+
+After running around in the corridors pressing buttons for a while, you managed to map the entire test chamber and realise that there are no cycles in the corridor network (but all chambers can of course be reached). You wonder if there is some merit to what GLaDOS said or whether that was just another attempt of her to demotivate you.
+
+\paragraph*{Input}
+
+The first line contains $n\leq10^6$ where $n+1$ is the number of rooms including the starting room.
+
+Then follow as many lines as there are corridors, each containing $0 \leq a,b \leq n$ which indicates a corridor between room $a$ and $b$.
+
+\paragraph*{Output}
+
+Output \texttt{"THERE WILL BE CAKE"} if there is a way to unlock the exit. Otherwise print \texttt{"THE CAKE IS A LIE"}.
+
+\begin{samples}
+  \sample{sample1}
+  \sample{sample2}
+  \sample{sample3}
+\end{samples}
+
+\end{document}
