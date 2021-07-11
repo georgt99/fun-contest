@@ -17,9 +17,9 @@ int main(int argc, char* argv[]) {
     // Exchange _wa by _pe if the format is wrong (should mostly be taken care of by the
     // input functions of ouf).
     // Remember that you should probably have a query limit and enforce it.
-
-    const auto target_x = inf.readInt();
-    const auto target_y = inf.readInt();
+    const auto target_xy = inf.readInts(2);
+    const auto target_x = target_xy[0];
+    const auto target_y = target_xy[1];
 
     const auto MAX_QUERIES = 50;
 
@@ -27,16 +27,12 @@ int main(int argc, char* argv[]) {
     auto last_y = 512;
     auto last_distance = calc_distance(target_x, target_y, last_x, last_y);
 
-    for(auto query =0; query < MAX_QUERIES; ++query) {
+    for(auto query = 0; query < MAX_QUERIES; ++query) {
         string t = ouf.readToken("l|r|t|b");
-        auto steps = inf.readInt();
+        auto steps = ouf.readInt(1, 1000000000);
 
-        if (steps < 1){
-            quit(_pe, "amount of steps must be positive");
-        }
-
-        auto x_steps = 0;
-        auto y_steps = 0;
+        int x_steps = 0;
+        int y_steps = 0;
         if (t == "l"){
             x_steps = -1 * steps;
         }
@@ -50,8 +46,8 @@ int main(int argc, char* argv[]) {
             y_steps = -1 * steps;
         }
 
-        query_x = last_x + x_steps;
-        query_y = last_y + y_steps;
+        auto query_x = last_x + x_steps;
+        auto query_y = last_y + y_steps;
 
         auto new_distance = calc_distance(target_x, target_y, query_x, query_y);
 

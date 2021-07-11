@@ -4,11 +4,11 @@ import random as r
 MIN_X = 0
 MIN_Y = 0
 
-MAX_X = 2048
-MAX_Y = 2048
+MAX_X = 1024
+MAX_Y = 1024
 
 SAMPLES = [
-    ['sample1', "512 1024"],
+    ['sample1', "1024 512"],
 ]
 
 for name, s in SAMPLES:
@@ -16,11 +16,14 @@ for name, s in SAMPLES:
     Path(name + '.desc').write_text(name+'\n')
 
 TESTCASES = [
-    ['top-left', "0 1024"],
-    ['top-right', "1024 1024"],
-    ['bottom-left', "0 0"],
-    ['bottom-right', "1024 0"],
-    ['initial-spot', "512 512"],
+    ['2-middle-left', "0 512"],
+    ['3-top-middle', "512 1024"],
+    ['4-bottom-middle', "512 0"],
+    ['5-top-left', "0 1024"],
+    ['6-top-right', "1024 1024"],
+    ['7-bottom-left', "0 0"],
+    ['8-bottom-right', "1024 0"],
+    ['9-initial-spot', "512 512"],
 ]
 
 for desc, s in TESTCASES:

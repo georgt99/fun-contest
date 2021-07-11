@@ -5,6 +5,12 @@ using namespace std;
 int current_x = 512;
 int current_y = 512;
 
+string read(){
+    string x;
+    while (getline(cin, x) && x.empty()){}
+    return x;
+}
+
 bool find_x(int x_min, int x_max){
     bool found = false;
     while (x_min <= x_max)
@@ -24,7 +30,7 @@ bool find_x(int x_min, int x_max){
             cout << "l " <<  abs(steps_to_x_mid) << endl;
         }
 
-        string q; cin >> q;
+        string q = read();
 
         current_x += steps_to_x_mid;
 
@@ -35,7 +41,7 @@ bool find_x(int x_min, int x_max){
 
         if (abs(steps_to_x_mid) > 1){
             cout << "r 1" << endl;
-            string q2; cin >> q;
+            string q2 = read();
             current_x++;
 
             if (q2 == "found"){
@@ -45,21 +51,27 @@ bool find_x(int x_min, int x_max){
 
             if (q2 == "hot")
                 x_min = current_x;
-            else
+            else if (q2 == "cold")
                 x_max = current_x - 1;
+            else
+                cout << "q is \"" << q2 << "\"" << endl;
         }
         else{
             if (steps_to_x_mid > 0){
                 if (q == "hot")
                     x_min = current_x;
-                else
+                else if (q == "cold")
                     x_max = current_x - 1;
+                else
+                    cout << "q is \"" << q << "\"" << endl;
             }
             else{
                 if (q == "cold")
                     x_min = current_x;
-                else
+                else if (q == "hot")
                     x_max = current_x - 1;
+                else
+                    cout << "q is \"" << q << "\"" << endl;
             }
         }
     }
@@ -86,7 +98,7 @@ bool find_y(int y_min, int y_max){
             cout << "b " <<  abs(steps_to_y_mid) << endl;
         }
 
-        string q; cin >> q;
+        string q = read();
 
         current_y += steps_to_y_mid;
 
@@ -97,7 +109,7 @@ bool find_y(int y_min, int y_max){
 
         if (abs(steps_to_y_mid) > 1){
             cout << "t 1" << endl;
-            string q2; cin >> q;
+            string q2 = read();
             current_y++;
 
             if (q2 == "found"){
@@ -107,21 +119,27 @@ bool find_y(int y_min, int y_max){
 
             if (q2 == "hot")
                 y_min = current_y;
-            else
+            else if (q2 == "cold")
                 y_max = current_y - 1;
+            else
+                cout << "q is \"" << q2 << "\"" << endl;
         }
         else{
             if (steps_to_y_mid > 0){
                 if (q == "hot")
                     y_min = current_y;
-                else
+                else if (q == "cold")
                     y_max = current_y - 1;
+                else
+                    cout << "q is \"" << q << "\"" << endl;
             }
             else{
                 if (q == "cold")
                     y_min = current_y;
-                else
+                else if (q == "hot")
                     y_max = current_y - 1;
+                else
+                    cout << "q is \"" << q << "\"" << endl;
             }
         }
     }
