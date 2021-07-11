@@ -24,10 +24,10 @@ bool find_x(int x_min, int x_max){
         }
 
         if (steps_to_x_mid > 0){
-            cout << "r " <<  abs(steps_to_x_mid) << endl;
+            cout << "e " <<  abs(steps_to_x_mid) << endl;
         }
         else{
-            cout << "l " <<  abs(steps_to_x_mid) << endl;
+            cout << "w " <<  abs(steps_to_x_mid) << endl;
         }
 
         string q = read();
@@ -40,7 +40,7 @@ bool find_x(int x_min, int x_max){
         }
 
         if (abs(steps_to_x_mid) > 1){
-            cout << "r 1" << endl;
+            cout << "e 1" << endl;
             string q2 = read();
             current_x++;
 
@@ -92,10 +92,10 @@ bool find_y(int y_min, int y_max){
         }
 
         if (steps_to_y_mid > 0){
-            cout << "t " <<  abs(steps_to_y_mid) << endl;
+            cout << "n " <<  abs(steps_to_y_mid) << endl;
         }
         else{
-            cout << "b " <<  abs(steps_to_y_mid) << endl;
+            cout << "s " <<  abs(steps_to_y_mid) << endl;
         }
 
         string q = read();
@@ -108,7 +108,7 @@ bool find_y(int y_min, int y_max){
         }
 
         if (abs(steps_to_y_mid) > 1){
-            cout << "t 1" << endl;
+            cout << "n 1" << endl;
             string q2 = read();
             current_y++;
 

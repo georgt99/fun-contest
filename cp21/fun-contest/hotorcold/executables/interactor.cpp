@@ -28,21 +28,21 @@ int main(int argc, char* argv[]) {
     auto last_distance = calc_distance(target_x, target_y, last_x, last_y);
 
     for(auto query = 0; query < MAX_QUERIES; ++query) {
-        string t = ouf.readToken("l|r|t|b");
+        string t = ouf.readToken("w|e|n|s");
         auto steps = ouf.readInt(1, 1000000000);
 
         int x_steps = 0;
         int y_steps = 0;
-        if (t == "l"){
+        if (t == "w"){
             x_steps = -1 * steps;
         }
-        else if (t == "r"){
+        else if (t == "e"){
             x_steps = steps;
         }
-        else if (t == "t"){
+        else if (t == "n"){
             y_steps = steps;
         }
-        else if (t == "b"){
+        else if (t == "s"){
             y_steps = -1 * steps;
         }
 
