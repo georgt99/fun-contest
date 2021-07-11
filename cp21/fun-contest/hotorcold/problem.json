@@ -1,0 +1,9 @@
+{
+  "description": "Interactive game to find a hidden object",
+  "difficulty": 3,
+  "tags": [
+    "binary search",
+    "games",
+    "implementation"
+  ]
+}

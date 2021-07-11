@@ -1,0 +1,53 @@
+\input{.template/template.tex}
+
+\begin{document}
+
+\makeheader{end of contest}
+
+Vitalik is a fan of crypto currency and security.
+That's why he uses a hardware wallet to protect his coins/tokens.
+However, he somehow lost the wallet and must recover it.
+He knows that it must be in an $1024 x 1024$ area around him.
+Luckily, he has a transmitter on him that can be used to localize the wallet.
+
+The transmitter has one button, a display and a limited battery capacity.
+On the first push of the button, the transmitter initializes itself with a location.
+On the succeeding pushes, the transmitter answers with $hot$ if it came nearer to the wallet,
+otherwise it answers with  $cold$.  The battery only lasts for $50$ pushes of the button.
+
+Vitalik contacted you to write an algorithm that is able to find the wallet before the battery runs out.
+
+\paragraph*{Interaction}
+
+This is an interactive problem. This means that your program will not first
+read some input and then write some output, but instead communicates with
+the jury by writing queries to standard output and reading the answers from
+standard input.
+
+You can perform up to $50$ operations to find the wallet. To do this just print
+\texttt{"<direction> <steps>"} to \texttt{stdout}.
+
+\begin{description}
+    \item[\texttt{<direction>}] A single character of  $'n'$ (North), $'e'$ (East) , $'s'$ (South) or $'w'$ (West) describing the walking direction.
+    \item[\texttt{<steps>}] A positive integer that sets the amount of steps Vitalik should walk.
+\end{description}
+
+In the beginning, Vitalik already pushed the button to initialize the transmitter.
+Then he will walk based on your directions and press the button again.
+You will get \texttt{hot}, \texttt{cold} or \texttt{found} as an answer.
+
+\paragraph*{Sample interaction}
+
+\noindent\begin{tcblisting}{listing only, colframe=white, colback=black!10!white, sharp corners, box align=top}
+< w 20
+> cold
+< e 50
+> hot
+< s 15
+> cold
+< n 55
+> found
+
+\end{tcblisting}
+
+\end{document}
