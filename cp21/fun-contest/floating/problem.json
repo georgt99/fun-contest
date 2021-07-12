@@ -1,0 +1,11 @@
+{
+  "based_on": {
+    "data": [
+      "https://leetcode.com/problems/max-area-of-island/"
+    ],
+    "type": "other"
+  },
+  "description": "Traverse adjacent tiles in a 2d grid to find max adjacent tiles",
+  "difficulty": 1,
+  "tags": []
+}
