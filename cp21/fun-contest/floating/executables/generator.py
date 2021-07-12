@@ -69,9 +69,9 @@ Path('random1000x1000.in').write_text(sample)
 Path('random1000x1000.desc').write_text('Random 1000x1000 sample \n')
 
 
-w = 500
-h = 500
-for i in range(3):
+w = 1000
+h = 1000
+for i in range(1,4):
     sample = str(w) + ' ' + str(h) + '\n'
     for _ in range(h):
         for _ in range(w):
@@ -84,6 +84,6 @@ for i in range(3):
             sample += tile
         sample += "\n"
 
-    Path(f'only{tile}.in').write_text(sample)
+    Path(f'single_filled{i}.in').write_text(sample)
 
-    Path(f'only{tile}.desc').write_text(f'Only ({tile}) tiles used\n')
+    Path(f'single_filled{i}.desc').write_text(f'Only ({tile}) tiles used\n')
