@@ -1,13 +1,8 @@
 {
-  "based_on": {
-    "data": [
-      "cp21",
-      "fun-contest",
-      "portal"
-    ],
-    "type": "uh-what-do-you-mean-with-type"
-  },
-  "description": "solve a test chamber while thinking with portals",
+  "description": "find a path through a test chamber using portals",
   "difficulty": 3,
-  "tags": ["graph", "tree", "abstracting"]
+  "tags": [
+    "dfs and similar",
+    "graphs"
+  ]
 }
