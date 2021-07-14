@@ -11,14 +11,15 @@ Path('sample1.in').write_text(
     '1 3\n'+
     '1 4\n'
 )
-Path('sample1.desc').write_text('1\n')
+Path('sample1.desc').write_text('Sample with Solution 1\n')
 
 Path('sample2.in').write_text(
     '4 3\n'+
     '3 2\n'+
-    '1 2\n'
+    '1 2\n'+
+    '3 4\n'
 )
-Path('sample2.desc').write_text('2\n')
+Path('sample2.desc').write_text('Sample with Solution 2\n')
 
 Path('sample3.in').write_text(
     '6 6\n'+
@@ -29,7 +30,7 @@ Path('sample3.in').write_text(
     '3 4\n'+
     '4 5\n'
 )
-Path('sample3.desc').write_text('3\n')
+Path('sample3.desc').write_text('Sample with Solution 3\n')
 
 
 
