@@ -3,6 +3,9 @@ from pathlib import Path
 import random as r
 
 MAX_NODES = 1000000
+PROBLEM_SIZES = {100, 1000, 10000, MAX_NODES}
+
+# public inputs
 
 Path('sample1.in').write_text(
     '3\n'+
@@ -34,10 +37,16 @@ Path('sample3.in').write_text(
 Path('sample3.desc').write_text('impossible chamber with 8 rooms\n')
 
 
+# secret inputs
 
-for i in range(1,11): # correct instances
+Path('singleNodeInGraph.in').write_text(
+    '0\n'
+)
+Path('singleNodeInGraph.desc').write_text('starting room is the only room\n')
+
+# random possible instances
+for n in PROBLEM_SIZES:
     input_text = ""
-    n = r.randint(10, MAX_NODES)
     input_text += str(n) + '\n'
     current_parent = 0
     remaining_nodes = list(range(1, n))
@@ -55,15 +64,16 @@ for i in range(1,11): # correct instances
                 input_text += f'{sub[x]} {sub[x+1]}\n'
         current_parent = fan_nodes[r.randint(1, fan_size) - 1]
         
-    Path('randomPossible' + str(i) + '.in').write_text(input_text)
-    Path('randomPossible' + str(i) + '.desc').write_text('random possible chamber ' + str(i) + '\n')
-    
-for i in range(1,11):
+    Path('randomPossibleWith' + str(n) + 'nodes.in').write_text(input_text)
+    Path('randomPossibleWith' + str(n) + 'nodes.desc').write_text('random possible chamber with ' + str(n) + ' nodes\n')
+
+
+# random impossible instances
+for n in PROBLEM_SIZES:
     was_blocking_node_used = False
     input_text = ""
     while not was_blocking_node_used: # this is a super ugly quickfix: the blocking node is sometimes not added, so we just try again
         input_text = ""
-        n = r.randint(10, MAX_NODES)
         input_text += str(n) + '\n'
         current_parent = 0
         remaining_nodes = list(range(1, n))
@@ -94,5 +104,5 @@ for i in range(1,11):
                     was_blocking_node_used = True
 
 
-    Path('randomImpossible' + str(i) + '.in').write_text(input_text)
-    Path('randomImpossible' + str(i) + '.desc').write_text('random impossible chamber ' + str(i) + '\n')
+    Path('randomImpossibleWith' + str(n) + 'nodes.in').write_text(input_text)
+    Path('randomImpossibleWith' + str(n) + 'nodes.desc').write_text('random impossible chamber with ' + str(n) + ' nodes\n')
