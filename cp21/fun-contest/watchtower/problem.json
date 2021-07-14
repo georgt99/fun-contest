@@ -1,0 +1,8 @@
+{
+  "description": "minimum vertex cover",
+  "difficulty": 2,
+  "tags": [
+    "brute force",
+    "graphs"
+  ]
+}
