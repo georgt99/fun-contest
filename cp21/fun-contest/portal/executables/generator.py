@@ -2,7 +2,7 @@ from math import ceil
 from pathlib import Path
 import random as r
 
-MAX_NODES = 1000000
+MAX_NODES = 200000
 PROBLEM_SIZES = {100, 1000, 10000, MAX_NODES}
 
 # public inputs
