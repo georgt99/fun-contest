@@ -1,0 +1,34 @@
+\input{.template/template.tex}
+
+\begin{document}
+
+\makeheader{end of contest}
+
+During social distancing, you and your cat spent way too much time together. It is very annoyed by your presence by now and it's \textit{meow}s are getting furious.
+To make it less difficult to live with your grumpy cat, you wanted to find a way to figure out when it is extremely unfriendly and annoyed, so you can take precautions.
+Many furious \textit{meow}s later, you started to notice a pattern.
+
+
+When you add the number of \textit{e}'s and \textit{o}'s in the \textit{meow} of your cat together, you can calculate its happiness by counting all possible ways this number \textit{n} can be expressed as the sum of consecutive integers larger than zero.
+
+\paragraph*{Input}
+
+The input starts with a line containing a single integer \textit{t} 
+\begin{math}(1\leq t\leq 10^4)\end{math}
+ the number of test cases that follow.
+
+Each test case consists of one line, each containing 1 string \textit{s}. The length of the string is between\begin{math}(4\leq length\leq 2*10^6+2)\end{math}.
+The string is the \textit{meow} of your cat, that is guaranteed to have each of the letters m, e, o, w at least one time.
+\paragraph*{Output}
+
+For each test case print the politeness of your cat and it's \textit{meow}.
+\begin{samples}
+  \sample{sample1}
+\end{samples}
+
+\paragraph*{Sample Description}
+The second test case in the given sample contains 9 \textit{e}'s and \textit{o}'s. For the number 9, you can find 2 different represeantions as consecutive integers.\\
+9 = 2 + 3 + 4\\
+9 = 4 + 5
+
+\end{document}

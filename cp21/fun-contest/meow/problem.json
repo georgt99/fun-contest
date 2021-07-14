@@ -1,0 +1,11 @@
+{
+  "based_on": {
+    "data": [
+      "https://www.geeksforgeeks.org/find-politeness-number/"
+    ],
+    "type": "other"
+  },
+  "description": "calculate politeness of cat (number)",
+  "difficulty": 2,
+  "tags": []
+}
