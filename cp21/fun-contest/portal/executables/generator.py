@@ -18,8 +18,8 @@ Path('sample1.desc').write_text('straight line\n')
 Path('sample2.in').write_text(
     '4\n'+
     '0 1\n'+
+    '3 2\n'+
     '0 2\n'+
-    '2 3\n'+
     '2 4\n'
 )
 Path('sample2.desc').write_text('possible chamber with 5 rooms\n')
