@@ -49,7 +49,7 @@ for n in PROBLEM_SIZES:
     input_text = ""
     input_text += str(n) + '\n'
     current_parent = 0
-    remaining_nodes = list(range(1, n))
+    remaining_nodes = list(range(1, n+1))
     r.shuffle(remaining_nodes)
     while len(remaining_nodes) > 0:
         fan_size = r.randint(1, len(remaining_nodes))
