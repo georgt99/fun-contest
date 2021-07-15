@@ -1,0 +1,8 @@
+{
+  "description": "Given a string t and a string c, output the shortest sequence of single-character-edits (insert/delete/replace) transforming t into c, and the length of the sequence. If there are multiple solutions, output any of them.",
+  "difficulty": 2,
+  "tags": [
+    "dp",
+    "strings"
+  ]
+}

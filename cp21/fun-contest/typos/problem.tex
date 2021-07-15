@@ -1,0 +1,32 @@
+\input{.template/template.tex}
+
+\begin{document}
+
+\makeheader{end of contest}
+
+The end of the semester is near and you realize that you totally forgot about writing a documentation for one of your software projects, a brand new text editor. When you begin the tedious work of writing down the things you still remember (of course you use your self-made editor for this task), more and more typos sneak into the text. There should be an autocorrect feature somewhere, but you cannot remember how to activate it...
+
+Correcting all those typos takes valuables time, which you of course would rather spend on solving competitive programming problems. Therefore, you want to write a little program to support you by telling you the shortest sequence of operations in order to correct a mistyped word and also the number of operations, so you can decide beforehand if correcting that word is worth the effort. In your text editor you are currently limited to inserting, replacing or deleting one letter at a time, starting at the leftmost letter (no fancy vim hacks). The only advanced feature of your text editor that works at the moment is that it automatically selects the next letter when the current letter is already correct or after you performed one of the aforementioned operations, so you at least safe some keystrokes.
+
+At one point you apparently fell asleep with your head on the keyboard, so your program should be able to handle longer strings as well.
+
+\paragraph*{Input}
+
+The first line contains $n$ ($1 \leq n \leq 10$), the number of test cases.
+
+Each test case consists of a line containing two strings $t$ and $c$ ($1 \leq |t|, |c| \leq 10^3$), the misspelled word and its correctly spelled counterpart.
+
+\paragraph*{Output}
+
+For each test case, output a line.
+
+The line starts with a number $|s|$, the length of the shortest sequence of single-character edits transforming $t$ into $c$, followed by a string $s$ representing that sequence, using the letters ``i'', ``r'' and ``d'' to describe the used operations.
+
+If there are multiple possible solutions, print any of them.
+
+\begin{samples}[1.5] % the number changes the size ratio between input and output columns
+  \sample{sample}
+\end{samples}
+
+\end{document}
+
