@@ -36,7 +36,7 @@ const string_view SAMPLE3 = R"(4 2
 )";
 
 const string_view SAMPLE_IND_SET = R"(1 1
-1000 0
+200 0
 )";
 
 template <class F>
