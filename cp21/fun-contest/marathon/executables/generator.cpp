@@ -69,7 +69,7 @@ string lineOfPair(int x, int y) {
 }
 
 void clique_testcase(string name, string desc, int a, int k, int n) {
-    int m = (n*n-1) / 2;
+    int m = (n*(n-1)) / 2;
     vector<string> rows(m + 2);
     rows[0] = lineOfPair(a, k);
     rows[1] = lineOfPair(n, m);
@@ -110,15 +110,15 @@ int main(int argc, char* argv[]) {
     sample(2, SAMPLE2);
     sample(3, SAMPLE3);
 
-    predefined("sample4", "Independent Set", SAMPLE_IND_SET);
-    clique_testcase("sample5", "Small clique 1", 4, 3, 10);
-    clique_testcase("sample6", "Small clique 2", 3, 7, 10);
-    clique_testcase("sample7", "Big clique 1", MAX_A / 2, 13, MAX_N);
-    clique_testcase("sample8", "Big clique 2", MAX_A, MAX_K, MAX_N);
+    predefined("independentSet", "Independent Set", SAMPLE_IND_SET);
+    clique_testcase("clique1", "Small clique 1", 4, 3, 10);
+    clique_testcase("clique2", "Small clique 2", 3, 7, 10);
+    clique_testcase("clique3", "Big clique 1", MAX_A / 2, 13, MAX_N);
+    clique_testcase("clique4", "Big clique 2", MAX_A, MAX_K, MAX_N);
 
     int num_random_samples = 9;
     for (int i = 0; i < num_random_samples; i++) {
-        rnd_testcase("sample" + toString(num_random_samples+i), "Random Sample #" + toString(i+1));
+        rnd_testcase("random" + toString(num_random_samples+i), "Random Sample #" + toString(i+1));
     }
     return 0;
 }
