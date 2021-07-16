@@ -35,8 +35,8 @@ int main() {
 
     //For every town x, do all walks of length
     for (x = 0; x < n; x++) {
-        vector<int> possiblePaths(n, 0); //possiblePaths[y] is number of x-y-paths (with repeating edges) of length a
-        doWalk(x, a, G, possiblePaths);
+        vector<int> possiblePaths(n, 0); //possiblePaths[y] is number of x-y-paths (with repeating edges) of length 2^a
+        doWalk(x, pow(2,a), G, possiblePaths);
         for (y = x+1; y < n; y++) {
             if (possiblePaths[y] >= k)
                 solutions.push_back({x,y});

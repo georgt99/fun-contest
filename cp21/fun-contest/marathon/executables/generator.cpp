@@ -9,7 +9,7 @@ const int MAX_K = 20;
 const int MAX_M = 500;
 
 
-const string_view SAMPLE1 = R"(2 2
+const string_view SAMPLE1 = R"(1 2
 4 4
 0 1
 0 2
@@ -18,7 +18,7 @@ const string_view SAMPLE1 = R"(2 2
 )";
 
 
-const string_view SAMPLE2 = R"(2 3
+const string_view SAMPLE2 = R"(1 3
 5 7
 0 1
 0 2
@@ -29,13 +29,13 @@ const string_view SAMPLE2 = R"(2 3
 3 4
 )";
 
-const string_view SAMPLE3 = R"(4 2
+const string_view SAMPLE3 = R"(2 2
 3 2
 0 1
 1 2
 )";
 
-const string_view SAMPLE_IND_SET = R"(1 1
+const string_view SAMPLE_IND_SET = R"(0 1
 200 0
 )";
 
@@ -84,7 +84,7 @@ void clique_testcase(string name, string desc, int a, int k, int n) {
 }
 
 void rnd_testcase(string name, string desc) {
-    int a = rnd.next(1, MAX_A);
+    int a = rnd.next(0, MAX_A);
     int n = rnd.next(2, MAX_N);
     int m = rnd.next(0, MAX_M);
     int k = rnd.next(1, MAX_K);
