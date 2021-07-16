@@ -3,7 +3,7 @@ from pathlib import Path
 
 random.seed(-1723868745248908682)
 
-MAX_NODES = 15
+MAX_NODES = 20
 
 Path('sample1.in').write_text(
     '5 3\n'+
