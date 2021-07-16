@@ -23,6 +23,7 @@ int main() {
 	ios::sync_with_stdio(false);
 
 	cin >> a >> k >> n >> m;
+	a = 1 << a;
 	rep(i,0,m) {
 		int a, b; cin >> a >> b;
 		adj[a].push_back(b);
