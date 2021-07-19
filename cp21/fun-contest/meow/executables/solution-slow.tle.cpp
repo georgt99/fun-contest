@@ -27,7 +27,6 @@ int main() {
                     result++;
                     break;
                 }
-                if(sum > count) break;
             }
         }
     cout << result << "\n";
