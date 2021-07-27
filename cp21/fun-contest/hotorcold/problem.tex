@@ -7,13 +7,16 @@
 Vitalik is a fan of crypto currency and security.
 That's why he uses a hardware wallet to protect his coins/tokens.
 However, he somehow lost the wallet and must recover it.
-He knows that it must be in an $1024 x 1024$ area around him.
+He knows that it must be within an $1024 \times 1024$ area in which he is in the center.
 Luckily, he has a transmitter on him that can be used to localize the wallet.
 
 The transmitter has one button, a display and a limited battery capacity.
 On the first push of the button, the transmitter initializes itself with a location.
 On the succeeding pushes, the transmitter answers with $hot$ if it came nearer to the wallet,
-otherwise it answers with  $cold$.  The battery only lasts for $50$ pushes of the button.
+otherwise it answers with  $cold$.
+The transmitter internally uses the \textit{Manhattan distance} to calculate distances.
+
+The battery only lasts for $50$ pushes of the button.
 
 Vitalik contacted you to write an algorithm that is able to find the wallet before the battery runs out.
 

@@ -8,7 +8,7 @@ MAX_X = 1024
 MAX_Y = 1024
 
 SAMPLES = [
-    ['sample1', "1024 512"],
+    ['sample1', "542 552"],
 ]
 
 for name, s in SAMPLES:
@@ -16,6 +16,7 @@ for name, s in SAMPLES:
     Path(name + '.desc').write_text(name+'\n')
 
 TESTCASES = [
+    ['1-middle-right', "1024 512"],
     ['2-middle-left', "0 512"],
     ['3-top-middle', "512 1024"],
     ['4-bottom-middle', "512 0"],

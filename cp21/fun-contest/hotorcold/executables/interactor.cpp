@@ -53,7 +53,7 @@ int main(int argc, char* argv[]) {
 
         if (new_distance == 0){
             cout << "found" << endl;
-            quit(_ok, "Congrats, you found the hardware wallet.");
+            quit(_ok, "Congrats, you found the hardware wallet using " + to_string(query) + " queries.");
         }
         else if (new_distance < last_distance){
             cout << "hot" << endl;
