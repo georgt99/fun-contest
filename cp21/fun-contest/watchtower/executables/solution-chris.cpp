@@ -20,7 +20,7 @@ int main() {
     }
 
     int res = n;
-    rep(mask,2<<n) {
+    rep(mask,1<<n) {
         bitset<M> hit;
         rep(v,n) if((mask>>v)&1) hit |= e[v];
         if(hit.count()==m) res = min(res, __builtin_popcount(mask));
