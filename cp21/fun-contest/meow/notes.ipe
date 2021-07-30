@@ -403,7 +403,12 @@ h
 <page title="Meow">
 <layer name="alpha"/>
 <view layers="alpha" active="alpha"/>
-<text layer="alpha" matrix="1 0 0 1 0 -96" transformations="translations" pos="32 496" stroke="black" type="minipage" width="670" valign="top" style="item">blablabla</text>
-<text transformations="translations" pos="32 496" stroke="black" type="minipage" width="670" valign="top">\textbf{Problem:} Calculating the politeness of an integer</text>
+<text layer="alpha" matrix="1 0 0 1 0 -96" transformations="translations" pos="32 496" stroke="black" type="minipage" width="670" valign="top" style="item">\textbf{Politeness}= Anzahl der Möglichkeiten, die Zahl aus aufeinanderfolgenden Zahlen zu summieren</text>
+<text layer="alpha" matrix="1 0 0 1 0 -96" transformations="translations" pos="32 400" stroke="black" type="minipage" width="670" valign="top" style="item"> Naiv und zu langsam: loop durch alle Zahlen bis n und summiere von dort aus jede Zahl bis n (quadratische Laufzeit)</text>
+<text layer="alpha" matrix="1 0 0 1 0 -96" transformations="translations" pos="32 296" stroke="black" type="minipage" width="670" valign="top" style="item"> \textbf{Schneller:} Summe der ungeraden Faktoren nach Faktorisierung (O(sqrt(n)))</text>
+<text layer="alpha" matrix="1 0 0 1 0 -96" transformations="translations" pos="32 200" stroke="black" type="minipage" width="670" valign="top" style="item"> Siehe: https://www.geeksforgeeks.org/find-politeness-number/ </text>
+
+
+<text transformations="translations" pos="32 496" stroke="black" type="minipage" width="670" valign="top">\textbf{Problem:} Politeness einer Zahl berechnen</text>
 </page>
 </ipe>
